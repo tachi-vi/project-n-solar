@@ -1,0 +1,86 @@
+
+
+.btn-header{
+    background-color: transparent;
+    color: var(--btn-color);
+    font-size: 20px;
+    border: 0px;
+    padding: 0.5em 0.7em;
+    cursor: pointer;
+    font-weight: 450;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.btn-header::after{
+    content: '';
+    background-color: var(--btn-color);
+    position: absolute;
+    bottom: -2%;
+    transition: 0.5s ease;
+    left: 10%;
+    height: 2px;
+    width: 0;
+}
+
+.btn-header:hover::after{
+    width: 80%;
+}
+
+.btn-launch {
+ --color: var(--btn-color);
+ --color2: rgb(10, 25, 30);
+ padding: 0.4em 1.5em;
+ background-color: transparent;
+ border-radius: 6px;
+ border: .3px solid var(--color);
+ transition: .5s;
+ position: relative;
+ overflow: hidden;
+ cursor: pointer;
+ z-index: 1;
+ font-weight: 400;
+ font-size: 17px;
+ font-family: 'Roboto', 'Segoe UI', sans-serif;
+ text-transform: uppercase;
+ color: var(--color);
+}
+
+.btn-launch::after, .btn::before {
+ content: '';
+ display: block;
+ height: 100%;
+ width: 100%;
+ transform: skew(90deg) translate(-50%, -50%);
+ position: absolute;
+ inset: 50%;
+ left: 25%;
+ z-index: -1;
+ transition: 1s ease-out;
+ background-color: var(--color);
+}
+
+.btn-launch::before {
+ top: -50%;
+ left: -25%;
+ transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn-launch:hover::before {
+ transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.btn-launch:hover::after {
+ transform: skew(45deg) translate(-50%, -50%);
+}
+
+.btn-launch:hover {
+ color: var(--color2);
+}
+
+.btn-launch:active {
+ filter: brightness(.7);
+ transform: scale(.98);
+}

@@ -1,0 +1,175 @@
+:root {
+  --headerheight:70px;
+  --font-body: 'Raleway', sans-serif;
+  --font-heading: 'Orbitron', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: var(--site-bg-color);
+  font-family: var(--font-body);
+  color: #c5c6c7;
+  background: linear-gradient(135deg, #0b0c10, #1f2833);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: #66fcf1;
+}
+
+/* ----------- HEADER ----------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--headerheight);
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  padding: 0 2rem;
+  background-color: rgba(11, 12, 16, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(102, 252, 241, 0.2);
+
+  transform: translateY(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+.hide-header{
+  transform: translateY(-100%);
+
+}
+
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+header .nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.hideheaderbutton{
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  position: absolute;
+  bottom: -10%;
+  left: 1%;
+  cursor: pointer;
+
+}
+
+
+.hideheaderbutton2{
+  display: none;
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  position: absolute;
+  bottom: -10%;
+  left: 1%;
+  cursor: pointer;
+
+}
+/* ----------- MAIN ----------- */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------- INTRO SECTION ----------- */
+.intro {
+  width: min(90%, 800px);
+  border-radius: 20px;
+  background-color: rgba(31, 40, 51, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  text-align: center;
+}
+
+.intro button {
+  margin-top: 1.5rem;
+}
+
+----------- CARDS / SECTION STYLING -----------
+section {
+  margin: 3rem auto;
+  padding: 2rem;
+  width: min(90%, 1000px);
+  border-radius: 20px;
+  background-color: rgba(31, 40, 51, 0.35);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sectiontitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gridcontainer {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+canvas {
+    position: absolute;
+  top: 0;
+  left: 0;
+    overflow: hidden;
+}
+
+#space-circles{
+   
+    position: absolute;
+    z-index: 3;
+}
+
+#space-line-background{
+    position: absolute;
+    z-index: 1;
+}
+
+#space {
+    position: absolute; 
+    left: 200px
+}
+
+.toolMenu{
+  width: 600px;
+  height: 100px;
+  background-color: darkgrey;
+  position: absolute;
+  z-index: 4;
+    left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 10%;
+  margin: 0 auto;
+
+}

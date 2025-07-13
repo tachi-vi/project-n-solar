@@ -1,0 +1,38 @@
+section{
+    text-align: center; 
+    color: white;
+    margin-bottom: 60px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-bottom: 4vh;
+    padding-top: 4vh;
+    overflow: hidden;
+}
+
+.sectiontitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+
+hr {
+    height: 1px;
+    width: 30%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    padding: 0;
+}
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    grid-template-rows: repeat(auto-fit, 160px);
+    gap: 3vw;
+    place-content: center;
+    margin: 0px 3vw;
+}
