@@ -71,6 +71,28 @@ function HomePage(){
   );
 }
 
+function ToolBar(){
+  const [sim, setSim] = useState ('rk4');
+  const handleChange = (event) =>{
+    setSim(event.target.value)
+  }
+  return <>
+  <div className="toolBarContainerr">
+    <select id="dropdown"
+        value={sim}
+        onChange={handleChange}
+      >
+        <option value="">-- Select --</option>
+        <option value="euler">Euler Integrator</option>
+        <option value="rk2">Runge Kutta 2</option>
+        <option value="rk4">Runge Kutta 4</option>
+        <option value="vv">Velocity Verlet</option>
+      </select> 
+  </div>
+  
+  </>
+}
+
 function SimPage(){
   useEffect(() => {
     const script = document.createElement('script');
@@ -87,7 +109,6 @@ function SimPage(){
       </canvas>
       <canvas id="space-line-background">
       </canvas>
-       <div className="toolMenu"></div>
     </div>
    
     </>
